@@ -23,6 +23,8 @@ public class ModifyMoveSpeed : MonoBehaviour {
             playerMovementScript = other.gameObject.GetComponent<PlayerMovement>();
             playerMovementScript.speed = playerMovementScript.speed * modifier;
             Invoke("removeModifier", 4.0f);
+            this.gameObject.SetActive(false);
+            Destroy(this.gameObject, 5.0f);
         }
     }
 
