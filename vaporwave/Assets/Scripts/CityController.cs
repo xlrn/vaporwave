@@ -27,6 +27,7 @@ public class CityController : MonoBehaviour {
         {
             hp--;
             print(hp + "\n");
+            Destroy(other.gameObject);
         }
     }
 
