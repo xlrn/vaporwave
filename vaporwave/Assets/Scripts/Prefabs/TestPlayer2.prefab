@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1987178986169850}
   m_IsPrefabParent: 1
+--- !u!1 &1253956468966626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4269435023669348}
+  - component: {fileID: 114099314733316070}
+  m_Layer: 0
+  m_Name: WaveSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1361978434977226
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,6 +92,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4435645262890892}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4269435023669348
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253956468966626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.18, y: 0.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4435645262890892}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4297861896013404
@@ -102,6 +131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4297861896013404}
+  - {fileID: 4269435023669348}
   - {fileID: 4210715824959240}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -185,6 +215,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114099314733316070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253956468966626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd8c5db0b913f8469c38f9a9524fac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  shot: {fileID: 1670442949692286, guid: 081bc692819088a44b9167f4d9473d79, type: 2}
+  shotSpawn: {fileID: 4269435023669348}
+  fireRate: 1
+  iObj: {fileID: 0}
+  isPlayer1: 0
+  fireKey: enter
 --- !u!114 &114204666970504652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,7 +277,7 @@ MonoBehaviour:
   fireRate: 1
   iObj: {fileID: 0}
   isPlayer1: 0
-  fireKey: enter
+  fireKey: '[1]'
 --- !u!212 &212100426352973454
 SpriteRenderer:
   m_ObjectHideFlags: 1

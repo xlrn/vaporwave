@@ -22,7 +22,7 @@ public class shootingmove : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-        if (coll.gameObject.tag == "City" || coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "City" || coll.gameObject.tag == "Player" || coll.gameObject.tag == "wave")
         {
             Destroy (gameObject);
         }
