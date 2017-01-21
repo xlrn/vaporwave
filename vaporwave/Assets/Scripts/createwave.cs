@@ -9,19 +9,24 @@ public class createwave : MonoBehaviour {
 	public Transform shotSpawn;
 	public float fireRate;
 	public GameObject iObj;
+    public bool isPlayer1;
+    public string fireKey;
+
 
 	private float nextFire;
 
-	void Update ()
+	void FixedUpdate ()
 	{
-		if (Input.GetButton("Fire1") && Time.time > nextFire)
+		if (Input.GetKey(fireKey) && Time.time > nextFire)
 		{
 			nextFire = Time.time + fireRate;
 			iObj = (GameObject) Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-		}
+            
+        }
+        
+
+
 	}
-
-
 
 
 }
