@@ -11,18 +11,30 @@ public class PlayerMovement : MonoBehaviour {
     public string horizontalControl = "Horiz_P1";
     public string verticalControl = "Vert_P1";
 
+    private Animator anim;
+
     // Use this for initialization
     void Start () {
 
         rb = GetComponent<Rigidbody2D>();
+         anim = gameObject.GetComponent<Animator>();
 		
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        xMovement = Input.GetAxisRaw(horizontalControl);
-        yMovement = Input.GetAxisRaw(verticalControl);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(xMovement * speed, yMovement * speed);
+        if (anim.GetBool("isDefending"))
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+        else {
+            xMovement = Input.GetAxisRaw(horizontalControl);
+            yMovement = Input.GetAxisRaw(verticalControl);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(xMovement * speed, yMovement * speed);
+
+
+
+        }
 
     }
 }

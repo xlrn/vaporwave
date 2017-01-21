@@ -18,9 +18,7 @@ public class Defend : MonoBehaviour {
        
             bool isDefending = Input.GetKey(defenseInput);
             anim.SetBool("isDefending", isDefending);
-
-
-	}
+    }
 
     void Defense() {
 
