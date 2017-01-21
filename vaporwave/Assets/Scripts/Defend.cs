@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Defend : MonoBehaviour {
-    public string defenseInput = "Def1";
+    public string defenseInput = "q";
     private Animator anim;
     private bool isDefending = false;
 
@@ -16,7 +16,7 @@ public class Defend : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
        
-            bool isDefending = Input.GetKey("q");
+            bool isDefending = Input.GetKey(defenseInput);
             anim.SetBool("isDefending", isDefending);
 
 
