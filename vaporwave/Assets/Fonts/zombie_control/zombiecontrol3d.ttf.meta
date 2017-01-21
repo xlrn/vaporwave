@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c3da1bb11b43e408fabbbd72768a8e5e
+timeCreated: 1485028826
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Zombie Control 3D
+  fontNames:
+  - Zombie Control 3D
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

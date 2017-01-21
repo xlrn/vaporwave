@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 61e6f4453f55e4b5aa13f730e3b6b283
+timeCreated: 1485028826
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Zombie Control Rotated
+  fontNames:
+  - Zombie Control Rotated
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
