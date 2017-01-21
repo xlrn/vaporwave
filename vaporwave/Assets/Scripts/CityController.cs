@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CityController : MonoBehaviour {
-
+	//Nelson sucks
     [SerializeField]
     private int hp, maxHp;
 
