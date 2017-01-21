@@ -23,7 +23,7 @@ public class CityController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Projectile")
+        if (other.gameObject.tag == "waves")
         {
             hp--;
             print(hp + "\n");
