@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class CityController : MonoBehaviour {
 
-    private int hp;
-    private static int maxHp;
+    [SerializeField]
+    private int hp, maxHp;
+
+    [SerializeField]
+    private Sprite hp75, hp50, hp25, hp0;
+    private SpriteRenderer sr;
 
     void Start() {
+        maxHp = 100;
         hp = maxHp;
+        sr = GetComponent<SpriteRenderer>();    
+        }
+
+    void ChangeCitySprite(Sprite citySprite) {
+        sr.sprite = citySprite;
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -23,9 +33,17 @@ public class CityController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (hp <= 0)
-        {
-            Destroy(gameObject);
+        if (hp <= 75) {
+            ChangeCitySprite(hp75);
+        }
+        if (hp <= 50) {
+            ChangeCitySprite(hp50);
+        }
+        if (hp <= 25) {
+            ChangeCitySprite(hp25);
+        } 
+        if (hp <= 0) {
+            ChangeCitySprite(hp0);
         }
     }
 
