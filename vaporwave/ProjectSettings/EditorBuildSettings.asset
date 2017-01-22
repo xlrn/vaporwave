@@ -8,11 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/build2-testTrump.unity
   - enabled: 0
-    path: Assets/end-menu.unity
-  - enabled: 0
-    path: Assets/Scenes/startMenu.unity
-  - enabled: 0
     path: Assets/Scenes/testScene.unity
+  - enabled: 0
+    path: Assets/end-menu.unity
+  - enabled: 1
+    path: Assets/Scenes/startMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/mainScene.unity
   - enabled: 1
     path: Assets/Scenes/pre-outro.unity
   - enabled: 1

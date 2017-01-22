@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CityController : MonoBehaviour {
@@ -52,7 +53,7 @@ public class CityController : MonoBehaviour {
             ChangeCitySprite(hp25);
         } 
         if (hp <= 0f) {
-            ChangeCitySprite(hp0);
+            SceneManager.LoadScene("pre-outro");
         }
     }
 
