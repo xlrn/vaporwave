@@ -8,6 +8,8 @@ TagManager:
   - City
   - cities
   - wall
+  - bottom
+  - top
   layers:
   - Default
   - TransparentFX
