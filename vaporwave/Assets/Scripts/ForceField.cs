@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ForceField : MonoBehaviour {
 
+    public MysteryItemSpawn itemSpawner;
     public GameObject forceField;
     private GameObject newForceField;
     private GameObject player;
@@ -34,6 +35,7 @@ public class ForceField : MonoBehaviour {
             Invoke("removeForceField", 3.0f);
             this.gameObject.SetActive(false);
             Destroy(this.gameObject, 4.0f);
+            itemSpawner.amount--;
         }
     }
 

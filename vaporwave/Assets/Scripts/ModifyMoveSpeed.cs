@@ -6,6 +6,7 @@ public class ModifyMoveSpeed : MonoBehaviour {
 
     private float modifier = 3;
     private PlayerMovement playerMovementScript;
+    public MysteryItemSpawn itemSpawner;
 
     // Use this for initialization
     void Start () {
@@ -24,7 +25,9 @@ public class ModifyMoveSpeed : MonoBehaviour {
             playerMovementScript.speed = playerMovementScript.speed * modifier;
             Invoke("removeModifier", 4.0f);
             this.gameObject.SetActive(false);
+            itemSpawner.amount--;
             Destroy(this.gameObject, 5.0f);
+            
         }
     }
 
