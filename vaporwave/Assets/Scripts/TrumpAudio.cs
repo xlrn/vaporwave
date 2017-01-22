@@ -14,10 +14,10 @@ public class TrumpAudio : MonoBehaviour {
 	IEnumerator PlaySoundAfterDelay(AudioSource audioSource, float delay)
 	{
 		if (audioSource == null){ 
-			Debug.Log("Null"); 
+			//Debug.Log("Audio Null"); 
 			yield break;
 		} else { 
-			Debug.Log("Not Null"); 
+			//Debug.Log("Audio Not Null"); 
 			yield return new WaitForSeconds(delay); 
 			audioSource.Play();
 		}
