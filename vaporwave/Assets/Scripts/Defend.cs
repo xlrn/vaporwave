@@ -7,12 +7,17 @@ public class Defend : MonoBehaviour {
     private Animator anim;
     private bool isDefending = false;
     public Collider2D defenseTrigger;
+    private bool playerHurt = false;
+    Renderer rend;
 
 	// Use this for initialization
+
+    
 	void Awake () {
         anim = gameObject.GetComponent<Animator>();
-		
-	}
+        rend = GetComponent<Renderer>();
+
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -28,7 +33,37 @@ public class Defend : MonoBehaviour {
         }
     }
 
-    void Defense() {
+
+    void OnCollisionEnter2D(Collision2D coll) {
+        if (coll.gameObject.tag == "wave" && !isDefending && !playerHurt)
+        {
+            StartCoroutine(hurtPlayer(10,0.09f));
+
+
+        }
+
+
+
+
+        }
+
+
+
+
+    IEnumerator hurtPlayer(int numBlinks, float seconds)
+    {
+
+        playerHurt = true;
+
+        for (int i = 0; i < numBlinks; i++)
+        {            
+            rend.enabled = !rend.enabled;
+
+            yield return new WaitForSeconds(seconds);
+        }
+
+        rend.enabled = true;
+        playerHurt = false;
 
 
 
