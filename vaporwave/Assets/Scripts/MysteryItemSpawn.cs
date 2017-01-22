@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MysteryItemSpawn : MonoBehaviour {
 
-    public float timeInterval = 3f;
-    public float timeDelay = 2f;
-    public GameObject mysteryItem;
+    private float timeInterval = 15f;
+    private float timeDelay = 10f;
+    public GameObject[] mysteryItems;
     public int amount;
 
 	// Use this for initialization
@@ -15,15 +15,16 @@ public class MysteryItemSpawn : MonoBehaviour {
 	}
 
     void SpawnItem() {
+        float x = Mathf.Round(Random.Range(0, mysteryItems.Length));
         if (amount < 3)
         {
-            Instantiate(mysteryItem, randomPosition(), Quaternion.identity);
+            Instantiate(mysteryItems[(int)x], randomPosition(), Quaternion.identity);
             amount++;
         }
     }
 
     Vector3 randomPosition() {
-        float x = Random.Range(-8, 8);
+        float x = Random.Range(-6, 6);
         float y = Random.Range(-4, 4);
         return new Vector3(x, y, 0);
 

@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 95426572044774992}
   - component: {fileID: 114638193950683434}
   - component: {fileID: 61526214443438448}
+  - component: {fileID: 114481783206034020}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -203,6 +204,24 @@ MonoBehaviour:
   iObj: {fileID: 0}
   isPlayer1: 0
   fireKey: space
+--- !u!114 &114481783206034020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1051440273233454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd8c5db0b913f8469c38f9a9524fac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  shot: {fileID: 0}
+  shotSpawn: {fileID: 0}
+  fireRate: 0
+  iObj: {fileID: 0}
+  isPlayer1: 0
+  fireKey: 
 --- !u!114 &114638193950683434
 MonoBehaviour:
   m_ObjectHideFlags: 1

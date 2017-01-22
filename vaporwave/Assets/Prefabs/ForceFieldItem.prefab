@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4d6027d1e2bd345abefe205b448773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemSpawner: {fileID: 114921576751012994, guid: 94347118cda6f9c46b257bd6f52ccdef,
+    type: 2}
   forceField: {fileID: 1864049802495862, guid: 36ef24c711b6f9e409520ed0b10cabaf, type: 2}
 --- !u!212 &212149902456013530
 SpriteRenderer:
