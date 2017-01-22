@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CityController : MonoBehaviour {
+	
+    //[SerializeField]
+	//public int currentHp, maxHp;
 
-    [SerializeField]
-    private int hp, maxHp;
+	public HealthBar hpBar;
+	public GameObject player;
+
+
 
     [SerializeField]
     private Sprite hp75, hp50, hp25, hp0;
     private SpriteRenderer sr;
 
     void Start() {
-        maxHp = 100;
-        hp = maxHp;
+        hpBar.maxHp = 100.0f;
+		hpBar.currentHp = hpBar.maxHp;	
         sr = GetComponent<SpriteRenderer>();    
-        }
+	}
 
     void ChangeCitySprite(Sprite citySprite) {
         sr.sprite = citySprite;
@@ -23,27 +28,30 @@ public class CityController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "waves")
+        if (other.gameObject.tag == "wave")
         {
-            hp--;
-            print(hp + "\n");
+			hpBar = hpBar.GetComponent<HealthBar> ();
+			hpBar.TakeDamage ();
             Destroy(other.gameObject);
+			print (hpBar.currentHp);
+			print (hpBar.maxHp);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (hp <= 75) {
+		float hp = hpBar.currentHp;
+        if (hp <= 75f) {
             ChangeCitySprite(hp75);
         }
-        if (hp <= 50) {
+        if (hp <= 50f) {
             ChangeCitySprite(hp50);
         }
-        if (hp <= 25) {
+        if (hp <= 25f) {
             ChangeCitySprite(hp25);
         } 
-        if (hp <= 0) {
+        if (hp <= 0f) {
             ChangeCitySprite(hp0);
         }
     }
