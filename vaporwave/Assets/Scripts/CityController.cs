@@ -10,6 +10,8 @@ public class CityController : MonoBehaviour {
 	public HealthBar hpBar;
 	public GameObject player;
 
+
+
     [SerializeField]
     private Sprite hp75, hp50, hp25, hp0;
     private SpriteRenderer sr;
