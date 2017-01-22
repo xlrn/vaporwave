@@ -429,6 +429,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1110463061}
+  - component: {fileID: 1110463062}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -450,6 +451,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110463062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110463060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0cfa9f092ffbb47b043400a5ba0268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BackgroundMusicAudio: mainScene
 --- !u!114 &1635400944 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114607536449365002, guid: 7771e847544b7b8489305d8b82439c66,
