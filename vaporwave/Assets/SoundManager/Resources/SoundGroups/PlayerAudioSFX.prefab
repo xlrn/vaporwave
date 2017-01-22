@@ -1,28 +1,39 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &179912
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1952205537124560}
+  m_IsPrefabParent: 1
+--- !u!1 &1952205537124560
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 439920}
-  - component: {fileID: 8211842}
-  - component: {fileID: 11421864}
+  - component: {fileID: 4665264983684918}
+  - component: {fileID: 82570515757961806}
+  - component: {fileID: 114671722790291004}
   m_Layer: 0
-  m_Name: ClickSFX
+  m_Name: PlayerAudioSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &439920
+--- !u!4 &4665264983684918
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179912}
+  m_GameObject: {fileID: 1952205537124560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -30,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &8211842
+--- !u!82 &82570515757961806
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179912}
+  m_GameObject: {fileID: 1952205537124560}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -110,34 +121,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &11421864
+--- !u!114 &114671722790291004
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179912}
+  m_GameObject: {fileID: 1952205537124560}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e2915fac387c74f86f2415da516bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Sounds:
-  - {fileID: 8300000, guid: 3fb29c1bba77bc241b6773c798e74949, type: 3}
-  - {fileID: 8300000, guid: 8cc3c83d12bfb00469d9b2851abd7fa9, type: 3}
+  - {fileID: 8300000, guid: 27c63c13b4bf4784b93fc4e79a1e2c84, type: 3}
+  - {fileID: 8300000, guid: f1c5c55476d19e242b259c138f472181, type: 3}
   Music: 0
   RandomPitch: 1
-  RandomPitchMin: 0.95
-  RandomPitchMax: 1.05
+  RandomPitchMin: 1.1
+  RandomPitchMax: 1.3
   identifier: 
   mAudio: {fileID: 0}
---- !u!1001 &100100000
-Prefab:
-  m_ObjectHideFlags: 1
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 179912}
-  m_IsPrefabParent: 1

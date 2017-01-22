@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ForceField : MonoBehaviour {
-
-    public MysteryItemSpawn itemSpawner;
+    
     public GameObject forceField;
     private GameObject newForceField;
     private GameObject player;
@@ -33,7 +32,6 @@ public class ForceField : MonoBehaviour {
             newForceField.transform.position = player.transform.position;
             player.GetComponent<BoxCollider2D>().size = new Vector2(x * 2, y * 2);
             Invoke("removeForceField", 3.0f);
-            itemSpawner.amount--;
             this.gameObject.SetActive(false);
             Destroy(this.gameObject, 6.0f);
         }

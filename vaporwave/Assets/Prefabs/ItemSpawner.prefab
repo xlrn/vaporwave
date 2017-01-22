@@ -52,6 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mysteryItems:
-  - {fileID: 1987900052650360, guid: 4749afa5534a87f44b0f6eae67494d45, type: 2}
-  - {fileID: 1973715338604134, guid: 39e365a6fd842f74698565492ac10b02, type: 2}
-  amount: -20
+  - {fileID: 1987900052650360, guid: 2a80db715ae6f954a9f0e7648c04b32c, type: 2}
+  - {fileID: 1973715338604134, guid: fd10b2d160f21024bb3293bd9b95d786, type: 2}
