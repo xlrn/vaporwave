@@ -8,7 +8,8 @@ public class Defend : MonoBehaviour {
     private bool isDefending = false;
     public Collider2D defenseTrigger;
     private bool playerHurt = false;
-    Renderer rend;
+    private Renderer rend;
+    private Rigidbody2D rb;
 
 	// Use this for initialization
 
@@ -16,6 +17,7 @@ public class Defend : MonoBehaviour {
 	void Awake () {
         anim = gameObject.GetComponent<Animator>();
         rend = GetComponent<Renderer>();
+        rb = GetComponent<Rigidbody2D>();
 
     }
 	
@@ -54,7 +56,7 @@ public class Defend : MonoBehaviour {
 
     IEnumerator hurtPlayer(int numBlinks, float seconds)
     {
-
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         playerHurt = true;
 
         for (int i = 0; i < numBlinks; i++)
@@ -63,6 +65,7 @@ public class Defend : MonoBehaviour {
 
             yield return new WaitForSeconds(seconds);
         }
+        rb.constraints = RigidbodyConstraints2D.None;
 
         rend.enabled = true;
         playerHurt = false;
