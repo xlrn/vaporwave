@@ -31,9 +31,13 @@ public class PlayerMovement : MonoBehaviour {
             xMovement = Input.GetAxisRaw(horizontalControl);
             yMovement = Input.GetAxisRaw(verticalControl);
             GetComponent<Rigidbody2D>().velocity = new Vector2(xMovement * speed, yMovement * speed);
-
-
-
+            if (xMovement != 0 || yMovement != 0)
+            {
+                anim.SetBool("isWalking", true);
+            }
+            else {
+                anim.SetBool("isWalking", false);
+            }
         }
 
     }
