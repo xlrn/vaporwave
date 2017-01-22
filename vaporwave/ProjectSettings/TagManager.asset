@@ -7,6 +7,7 @@ TagManager:
   - wave
   - City
   - cities
+  - wall
   layers:
   - Default
   - TransparentFX
