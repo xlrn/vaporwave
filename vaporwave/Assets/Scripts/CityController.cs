@@ -10,7 +10,7 @@ public class CityController : MonoBehaviour {
 
 	public HealthBar hpBar;
 	public GameObject player;
-
+    public SoundGroup Music;
 
 
     [SerializeField]
@@ -53,6 +53,7 @@ public class CityController : MonoBehaviour {
             ChangeCitySprite(hp25);
         } 
         if (hp <= 0f) {
+            Music.ForceStop();
             SceneManager.LoadScene("pre-outro");
         }
     }
