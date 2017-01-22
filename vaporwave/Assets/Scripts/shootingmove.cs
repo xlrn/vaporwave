@@ -15,9 +15,8 @@ public class shootingmove : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if (coll.gameObject.tag == "wave") 
+		if (coll.gameObject.tag == "wave" || coll.gameObject.tag == "cities" ) 
 		{
-			Destroy (coll.gameObject);
 			Destroy (this.gameObject);
 		}
 
