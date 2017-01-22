@@ -24,10 +24,12 @@ public class Defend : MonoBehaviour {
        
         if (Input.GetKey(defenseInput))
         {
+            isDefending = true;
             defenseTrigger.enabled = true;
             anim.SetBool("isDefending", true);
         }
         else {
+            isDefending = false;
             defenseTrigger.enabled = false;
             anim.SetBool("isDefending", false);
         }
