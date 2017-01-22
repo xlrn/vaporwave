@@ -9,49 +9,53 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1511536713117070}
+  m_RootGameObject: {fileID: 1304013213946784}
   m_IsPrefabParent: 1
---- !u!1 &1511536713117070
+--- !u!1 &1304013213946784
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4254543583658098}
-  - component: {fileID: 114921576751012994}
+  - component: {fileID: 4535658502282092}
+  - component: {fileID: 114094719146128088}
   m_Layer: 0
-  m_Name: ItemSpawner
+  m_Name: InvisibleTrump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4254543583658098
+--- !u!4 &4535658502282092
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1511536713117070}
+  m_GameObject: {fileID: 1304013213946784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1237102, y: -0.007067492, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114921576751012994
+--- !u!114 &114094719146128088
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1511536713117070}
+  m_GameObject: {fileID: 1304013213946784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f789b56d3ed89de4bb1d88dfd22565cc, type: 3}
+  m_Script: {fileID: 11500000, guid: c7ce3c03fd1168d468e37860d628fd47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mysteryItems:
-  - {fileID: 1987900052650360, guid: 2a80db715ae6f954a9f0e7648c04b32c, type: 2}
-  - {fileID: 1973715338604134, guid: fd10b2d160f21024bb3293bd9b95d786, type: 2}
-  - {fileID: 1256442456933694, guid: 18d2c1c9002f94045a4dc12730a2d44b, type: 2}
+  trumpObject: {fileID: 1687670824659564, guid: f2b3ee8b80de3744fa04a651d6806ebb,
+    type: 2}
+  stoneObject: {fileID: 1665128186519922, guid: d85a0cf2c1d96b845adf2ed4c19c4bf1,
+    type: 2}
+  textObject: {fileID: 1049661517347562, guid: 0513df4222bb8234d8702d2baca9ab51, type: 2}
+  mytimer: -100
+  dostuff: 1
+  counter: 0

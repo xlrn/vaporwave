@@ -3,37 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VaporScript : MonoBehaviour {
-	public Camera lecamera;
+	private Camera lecamera;
 	public GameObject trumpObject;
 	public GameObject stoneObject;
 	public GameObject textObject;
-	public Transform trumpTransform;
+	private Transform trumpTransform;
 
-	private float mytimer;
-	private bool dostuff;
-	private float counter;
+	public float mytimer = -100;
+    public bool dostuff = false;
+	public float counter;
 
 	void Start(){
-		bool dostuff = false;
-		mytimer = -100;
+        lecamera = Camera.main;
+        trumpTransform = lecamera.transform;
+        bool dostuff = false;
+		mytimer = Time.time;
 
 		counter = 0;
-	}
+
+    }
 
 	// Update is called once per frame
 	void Update () {
 		float currentTime = Time.time;
 
-		if (Input.GetKeyDown ("5")) {
-			mytimer = Time.time;
-			dostuff = true;
-			counter = 0;
-		}
-		
-		if (currentTime - mytimer < 7)
+
+        if (currentTime - mytimer < 7)
 			lecamera.depth = 1;
 		else
-			lecamera.depth = -1;
+			lecamera.depth = -2;
 		
 	
 		if (dostuff == true) {
@@ -57,7 +55,7 @@ public class VaporScript : MonoBehaviour {
 				//spawn the trump text
 				Vector3 textlocation = new Vector3(-10,Random.Range(-10,10),1);
 				GameObject myTrumpText = Instantiate (textObject, textlocation, trumpTransform.rotation);
-
+                print("created something" + Time.time);
 				counter++;
 			} 
 			
@@ -65,12 +63,12 @@ public class VaporScript : MonoBehaviour {
 		
 			if(counter > 10)
 				dostuff = false;
-		
-
 
 		}
 		
 	}
 
+
+    
 
 }
