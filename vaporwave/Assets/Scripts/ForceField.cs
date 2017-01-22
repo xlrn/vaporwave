@@ -9,10 +9,12 @@ public class ForceField : MonoBehaviour {
     private GameObject player;
     private float x;
     private float y;
+	private float originalx, originaly;
 
     // Use this for initialization
     void Start () {
-		
+		originalx = player.GetComponent<BoxCollider2D>().size.x;
+		originaly = player.GetComponent<BoxCollider2D>().size.y;
 	}
 	
 	// Update is called once per frame
@@ -38,7 +40,7 @@ public class ForceField : MonoBehaviour {
     }
 
     void removeForceField() {
-        player.GetComponent<BoxCollider2D>().size = new Vector2(x, y);
+        player.GetComponent<BoxCollider2D>().size = new Vector2(originalx, originaly);
         Destroy(newForceField); 
     }
 }

@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 95360067765905040}
   - component: {fileID: 114028195126976910}
   - component: {fileID: 61087059974297904}
+  - component: {fileID: 114836568462542040}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -231,6 +232,18 @@ MonoBehaviour:
   iObj: {fileID: 0}
   isPlayer1: 0
   fireKey: '[1]'
+--- !u!114 &114836568462542040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201903824726648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe2a13f973d68641a286579b6573a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerAudioSFX: PlayerAudioSFX
 --- !u!212 &212108149062162428
 SpriteRenderer:
   m_ObjectHideFlags: 1

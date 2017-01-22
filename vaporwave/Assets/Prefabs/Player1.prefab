@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe2a13f973d68641a286579b6573a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAudioSFX: 
+  PlayerAudioSFX: PlayerAudioSFX
 --- !u!114 &114638193950683434
 MonoBehaviour:
   m_ObjectHideFlags: 1

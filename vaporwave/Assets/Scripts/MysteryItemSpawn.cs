@@ -5,7 +5,7 @@ using UnityEngine;
 public class MysteryItemSpawn : MonoBehaviour {
 
     private float timeInterval = 15f;
-    private float timeDelay = 10f;
+    private float timeDelay = 3f;
     public GameObject[] mysteryItems;
 
 	// Use this for initialization
